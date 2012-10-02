@@ -1,0 +1,20 @@
+{% extends "Index.html" %}  <!--Specifies templates parent-->
+
+{% block title %} Metaldyne.co.uk {% endblock %} <!--Overides title in head-->
+
+{% block head %}            <!--Overides head data-->
+{% endblock %}
+
+{% block content %}         <!--Overides content data-->
+
+<h1> {{ pageTitle }} </h1>
+
+<div class="meh"><p>Unknown Degree Members:</p></div>
+
+<!-- Notes: {% for NameList in Names %}  Loops through array in TemplateHandler.php-->
+<br/>
+<div class="NameList">
+    {{ Names }}
+</div>
+
+{% endblock content %}
