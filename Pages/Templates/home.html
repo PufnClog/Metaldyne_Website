@@ -1,0 +1,38 @@
+<!--
+	Alright, this is obviously your main template file for the homepage. The idea is kind of similar to how master pages work.
+	It has a bit of a twist though, you have to wrap the header and footer around your content yourself, not just replace
+	content. This is the most flexible way of doing things because you are able to use the least amount of templates possible
+	to make the same content.
+
+	For example, you can use the exact same header across all your pages and just assign a different title variable value for
+	each page. Simple eh?
+-->
+
+
+
+{% include "./Base/header.tpl" %}
+
+<div>
+	<h1>Your main stuff goes here!</h1>
+	<ul>
+		<!--
+			Twig is a bit weird, but it does seem pretty neat actually. When you use logic in your templates you use the
+		    { % (whatever logic) % } like that (without the spaces before the first % and after the last %). You can see
+		    this in the for loop used below:
+
+			When you call a variable on the other hand, you use the { { (var name) } } (once again without the spaces
+		    between the 2 {'s'and }'s). You can access arrays by just putting a dot and the array key, like so:
+		-->
+
+		{% for name in names %}
+			<li>{{ name.firstName }} {{ name.lastName }}</li>
+		{% endfor %}
+	</ul>
+
+	<!--
+		If you want to include HTML in the variables, do so by using the raw option:
+	-->
+	<p>{{ testVar | raw }}</p>
+</div>
+
+{% include "./Base/footer.tpl" %}
