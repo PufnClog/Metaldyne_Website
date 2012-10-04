@@ -47,14 +47,17 @@ class __TwigTemplate_86c39df5096740f7ba38ffb402430738 extends Twig_Template
 
 \t\t";
         // line 27
+        if (isset($context["names"])) { $_names_ = $context["names"]; } else { $_names_ = null; }
         $context['_parent'] = (array) $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["names"]) ? $context["names"] : null));
+        $context['_seq'] = twig_ensure_traversable($_names_);
         foreach ($context['_seq'] as $context["_key"] => $context["name"]) {
             // line 28
             echo "\t\t\t<li>";
-            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["name"]) ? $context["name"] : null), "firstName"), "html", null, true);
+            if (isset($context["name"])) { $_name_ = $context["name"]; } else { $_name_ = null; }
+            echo twig_escape_filter($this->env, $this->getAttribute($_name_, "firstName"), "html", null, true);
             echo " ";
-            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["name"]) ? $context["name"] : null), "lastName"), "html", null, true);
+            if (isset($context["name"])) { $_name_ = $context["name"]; } else { $_name_ = null; }
+            echo twig_escape_filter($this->env, $this->getAttribute($_name_, "lastName"), "html", null, true);
             echo "</li>
 \t\t";
         }
@@ -69,7 +72,8 @@ class __TwigTemplate_86c39df5096740f7ba38ffb402430738 extends Twig_Template
 \t-->
 \t<p>";
         // line 35
-        echo (isset($context["testVar"]) ? $context["testVar"] : null);
+        if (isset($context["testVar"])) { $_testVar_ = $context["testVar"]; } else { $_testVar_ = null; }
+        echo $_testVar_;
         echo "</p>
 </div>
 
@@ -90,6 +94,6 @@ class __TwigTemplate_86c39df5096740f7ba38ffb402430738 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  76 => 38,  70 => 35,  63 => 30,  52 => 28,  48 => 27,  33 => 14,  31 => 13,  17 => 1,);
+        return array (  80 => 38,  73 => 35,  66 => 30,  53 => 28,  48 => 27,  33 => 14,  31 => 13,  17 => 1,);
     }
 }

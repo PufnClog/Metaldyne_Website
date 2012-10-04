@@ -17,7 +17,8 @@ class __TwigTemplate_89f0b6bce423eafd46b4bdd6cf803971 extends Twig_Template
     {
         // line 1
         echo "<title>";
-        echo twig_escape_filter($this->env, (isset($context["pageTitle"]) ? $context["pageTitle"] : null), "html", null, true);
+        if (isset($context["pageTitle"])) { $_pageTitle_ = $context["pageTitle"]; } else { $_pageTitle_ = null; }
+        echo twig_escape_filter($this->env, $_pageTitle_, "html", null, true);
         echo "</title>";
     }
 
@@ -33,6 +34,6 @@ class __TwigTemplate_89f0b6bce423eafd46b4bdd6cf803971 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  17 => 1,);
+        return array (  24 => 5,  22 => 4,  80 => 38,  73 => 35,  66 => 30,  53 => 28,  48 => 27,  33 => 14,  31 => 13,  17 => 1,);
     }
 }
